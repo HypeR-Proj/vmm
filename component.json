@@ -1,31 +1,12 @@
 {
+  "SPDX-FileCopyrightText": "2026 roolrz",
+  "SPDX-License-Identifier": "Apache-2.0",
   "version": 1,
   "name": "vmm",
   "kind": "application",
   "origin": {
     "repository": "https://github.com/roolrz/HypeR",
     "commit": "8d42d047058a2b58a291803700e86487fb723f7a"
-  },
-  "sources": {
-    "Cargo.toml": "app/vmm/Cargo.toml",
-    "component.mk": "app/vmm/component.mk",
-    "src/cli.rs": "app/vmm/src/cli.rs",
-    "src/completion.rs": "app/vmm/src/completion.rs",
-    "src/console.rs": "app/vmm/src/console.rs",
-    "src/lib.rs": "app/vmm/src/lib.rs",
-    "src/main.rs": "app/vmm/src/main.rs",
-    "src/output.rs": "app/vmm/src/output.rs",
-    "src/session.rs": "app/vmm/src/session.rs",
-    "src/transport.rs": "app/vmm/src/transport.rs",
-    "tests/cli.rs": "app/vmm/tests/cli.rs",
-    "tests/completion.rs": "app/vmm/tests/completion.rs",
-    "tests/console.rs": "app/vmm/tests/console.rs",
-    "tests/output.rs": "app/vmm/tests/output.rs"
-  },
-  "SPDX-FileCopyrightText": "2026 roolrz",
-  "SPDX-License-Identifier": "Apache-2.0",
-  "mounts": {
-    "": "app/vmm"
   },
   "packages": [
     "hyper-vmm"
@@ -36,44 +17,5 @@
       "app-test",
       "APP_TEST_PACKAGE=hyper-vmm"
     ]
-  ],
-  "cargo_context": {
-    "Cargo.toml": {
-      "workspace": null,
-      "membership": "..",
-      "dependency_paths": {
-        "/dependencies/hyper-terminal": "lib/terminal",
-        "/dependencies/hyper-service": "lib/service",
-        "target.cfg(target_os = \"hyper\")/dependencies/hyper-clap-shared": "lib/clap",
-        "target.cfg(target_os = \"hyper\")/dependencies/hyper-vm-policy-shared": "lib/vm-policy/shared",
-        "target.cfg(not(target_os = \"hyper\"))/dependencies/hyper-vm-policy": "lib/vm-policy"
-      },
-      "inherited_dependencies": {
-        "/dependencies/clap": {
-          "workspace": true
-        },
-        "/dependencies/hyper-os": {
-          "workspace": true
-        },
-        "/dependencies/hyper-rt": {
-          "workspace": true
-        },
-        "/dependencies/hyper-terminal": {
-          "workspace": true
-        },
-        "/dependencies/hyper-service": {
-          "workspace": true
-        },
-        "target.cfg(target_os = \"hyper\")/dependencies/hyper-clap-shared": {
-          "workspace": true
-        },
-        "target.cfg(target_os = \"hyper\")/dependencies/hyper-vm-policy-shared": {
-          "workspace": true
-        },
-        "target.cfg(not(target_os = \"hyper\"))/dependencies/hyper-vm-policy": {
-          "workspace": true
-        }
-      }
-    }
-  }
+  ]
 }
