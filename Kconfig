@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 roolrz
+# SPDX-License-Identifier: Apache-2.0
+
+config SYSTEM_APP_VMM
+    bool "vmm (/bin/vmm)"
+    default y
+    depends on SYSTEM_APP_VM_MANAGER
+    help
+        Build and deploy hyper-vmm at /bin/vmm.
+
