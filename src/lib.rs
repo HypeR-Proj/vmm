@@ -11,3 +11,6 @@ pub mod console;
 
 #[cfg(test)]
 mod output;
+
+#[cfg(target_os = "hyper")]
+extern crate hyper_clap_shared as clap;

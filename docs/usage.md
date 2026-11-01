@@ -151,7 +151,7 @@ the current instance; restarting reapplies the saved definition's defaults.
 For board deployments, edit the board JSON's VM `configuration` or `io-vm`
 object; generated configuration files and ITBs need no manual edits. Ordinary
 builds preserve an existing disk, including `/data/vms.json`; see
-[updating existing deployments](https://hyper-proj.github.io/build/docs/deployment/board-storage.html#updating-existing-deployments)
+[updating existing deployments](https://hyper-proj.github.io/HypeR/docs/usage/board-storage.html#updating-existing-deployments)
 to apply a changed configuration.
 
 ### Scheduling
@@ -326,7 +326,7 @@ needs its firmware boot files. Existing disks are intentionally preserved by
 `make` and `make run`; use `make rebuild` to reset the disk and refresh its
 packaged content. Normal `make` refreshes host-side kernel and ramdisk artifacts and replaces
 a changed EROFS system partition after validation, preserving bytes outside it.
-See [updating existing deployments](https://hyper-proj.github.io/build/docs/deployment/board-storage.html#updating-existing-deployments)
+See [updating existing deployments](https://hyper-proj.github.io/HypeR/docs/usage/board-storage.html#updating-existing-deployments)
 for writable system volumes, layout changes and configuration updates.
 
 `vmm list` and `vmm status NAME` distinguish RAM capacity from **allocated VM
