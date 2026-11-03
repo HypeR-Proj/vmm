@@ -323,8 +323,9 @@ This change does not alter either filesystem's case semantics.
 QEMU loads the hypervisor image directly from the host, so the configuration
 volume contains guest artifacts and configuration, not `hyper.img`. Pi 5 still
 needs its firmware boot files. Existing disks are intentionally preserved by
-`make` and `make run`; use `make rebuild` to reset the disk and refresh its
-packaged content. Normal `make` refreshes host-side kernel and ramdisk artifacts and replaces
+`make`, `make rebuild` and `make run`. Stop the VM and explicitly use
+`make board-reset-storage` to reset the disk and refresh all packaged content.
+Normal builds refresh host-side kernel and ramdisk artifacts and replace
 a changed EROFS system partition after validation, preserving bytes outside it.
 See [updating existing deployments](https://hyper-proj.github.io/HypeR/docs/usage/board-storage.html#updating-existing-deployments)
 for writable system volumes, layout changes and configuration updates.
